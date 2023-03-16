@@ -2,6 +2,7 @@
 
 package com.adoyo
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
@@ -29,6 +30,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun ContactScreen(
     state: ContactState,
@@ -39,7 +41,7 @@ fun ContactScreen(
             FloatingActionButton(onClick = { onEvent(ContactEvent.ShowDialog) }) {
                 Icon(Icons.Default.Add, contentDescription = "Add")
             }
-        }) { _ ->
+        }) {
         if (state.isAddingContact) {
             AddContactDialog(state = state, onEvent = onEvent)
         }
