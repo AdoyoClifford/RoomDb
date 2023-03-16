@@ -89,7 +89,7 @@ class ContactViewModel(
             }
 
             ContactEvent.ShowDialog -> {
-                _state.update { it.copy(isAddingContact = false) }
+                _state.update { it.copy(isAddingContact = true) }
             }
 
             is ContactEvent.SortContact -> {

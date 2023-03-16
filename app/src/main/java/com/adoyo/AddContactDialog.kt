@@ -5,7 +5,7 @@ package com.adoyo
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -24,9 +24,9 @@ fun AddContactDialog(
     AlertDialog(onDismissRequest = {
         onEvent(ContactEvent.HideDialog)
     }, confirmButton = {
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.CenterEnd) {
             Button(onClick = { onEvent(ContactEvent.SaveContact) }) {
-
+                Text(text = "Save")
             }
         }
     }, text = {
