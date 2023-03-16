@@ -10,5 +10,4 @@ data class Contacts(
     val phoneNumber: String,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0
-
 )
