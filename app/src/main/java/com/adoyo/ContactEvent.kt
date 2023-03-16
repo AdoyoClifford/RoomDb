@@ -7,6 +7,6 @@ sealed interface ContactEvent {
     data class SetPhoneNumber(val phoneNumber: String): ContactEvent
     object ShowDialog: ContactEvent
     object HideDialog: ContactEvent
-    data class SortContact(val contacts: SortType): ContactEvent
+    data class SortContact(val sortType: SortType): ContactEvent
     data class DeleteContact(val contacts: Contacts): ContactEvent
 }

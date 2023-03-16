@@ -13,13 +13,13 @@ interface ContactDao {
     @Delete
     suspend fun deleteContact(contacts: Contacts)
 
-    @Query("SELECT * FROM Contacts ORDER BY firstName")
+    @Query("SELECT * FROM Contacts ORDER BY firstName ASC")
     fun getContactsOrderedByFirstName(): Flow<List<Contacts>>
 
-    @Query("SELECT * FROM Contacts ORDER BY lastName")
+    @Query("SELECT * FROM Contacts ORDER BY lastName ASC")
     fun getContactsOrderedByLastName(): Flow<List<Contacts>>
 
-    @Query("SELECT * FROM Contacts ORDER BY phoneNumber")
+    @Query("SELECT * FROM Contacts ORDER BY phoneNumber ASC")
     fun getContactsOrderedByPhoneNumber(): Flow<List<Contacts>>
 
 }
